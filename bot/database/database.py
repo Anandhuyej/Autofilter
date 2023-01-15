@@ -2,7 +2,7 @@ import os
 import motor.motor_asyncio # pylint: disable=import-error
 from bot import DB_URI
 
-DB_NAME = os.environ.get("DB_NAME", "@horne_ybot")
+DB_NAME = os.environ.get("@horne_ybot", "Telegram_files")
 
 class Database:
 
