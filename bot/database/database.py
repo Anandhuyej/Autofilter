@@ -2,7 +2,7 @@ import os
 import motor.motor_asyncio # pylint: disable=import-error
 from bot import DB_URI
 
-DB_NAME = os.environ.get("@horne_ybot", "Telegram_files")
+DB_NAME = os.environ.get("DB_NAME", "@horne_ybot")
 
 class Database:
 
@@ -11,7 +11,7 @@ class Database:
         self.db = self._client[DB_NAME]
         self.col = self.db["Main"]
         self.acol = self.db["Active_Chats"]
-        self.fcol = self.db["Filter_Collection"]
+        self.fcol = self.db["Telegram_files"]
         
         self.cache = {}
         self.acache = {}
